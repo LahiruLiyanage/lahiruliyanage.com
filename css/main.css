@@ -22,3 +22,53 @@ body {
     z-index: 1000;
 }
 
+.nav-name {
+    color: var(--primary-color);
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.nav-logo span {
+    color: var(--accent-color);
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.nav_menu_list {
+    list-style: none;
+    margin-bottom: 0;
+    padding-right: 40px;
+}
+
+.nav_list {
+    position: relative;
+}
+
+.nav-link {
+    color: var(--dark-color);
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover, .active-link {
+    color: var(--primary-color);
+}
+
+.circle {
+    height: 8px;
+    width: 8px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.active-link + .circle, .nav-link:hover + .circle {
+    opacity: 1;
+    bottom: -4px;
+}
+
