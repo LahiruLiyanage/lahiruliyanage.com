@@ -312,3 +312,33 @@ footer {
     color: var(--text-color);
 }
 
+/* Responsive */
+@media (max-width: 991px) {
+    .nav_menu_list {
+        padding-right: 0;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .hero-content {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .section-title::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .section-title, .about-desc {
+        text-align: center;
+    }
+}
