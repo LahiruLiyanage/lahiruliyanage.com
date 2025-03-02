@@ -44,5 +44,36 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Theme Switch
+    const themeSwitch = document.getElementById('theme-switch');
+    const themeIcon = document.getElementById('theme-icon');
+    const htmlTag = document.documentElement;
 
+    // Check for saved theme preference or use device preference
+    const savedTheme = localStorage.getItem('theme') ||
+        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+
+    // Apply saved theme
+    htmlTag.setAttribute('data-theme', savedTheme);
+    updateThemeIcon(savedTheme);
+
+    // Toggle theme
+    themeSwitch.addEventListener('click', () => {
+        const currentTheme = htmlTag.getAttribute('data-theme');
+        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+
+        htmlTag.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        updateThemeIcon(newTheme);
+    });
+
+    function updateThemeIcon(theme) {
+        if (theme === 'dark') {
+            themeIcon.classList.remove('fa-sun');
+            themeIcon.classList.add('fa-moon');
+        } else {
+            themeIcon.classList.remove('fa-moon');
+            themeIcon.classList.add('fa-sun');
+        }
+    }
 });
