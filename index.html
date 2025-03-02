@@ -6,73 +6,69 @@
     <title>Lahiru Liyanage</title>
     <link rel="stylesheet" href="./css/main.css">
     <script type="module" src="./js/main.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
             crossorigin="anonymous"></script>
 </head>
 <body>
 <!-- Header -->
-<nav id="header" class="navbar navbar-expand-lg navbar-light">
+<nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
-        <div class="nav-logo">
-            <p class="nav-name fs-2 pt-2">Lahiru Liyanage<span>.</span></p>
-        </div>
+        <a class="navbar-brand fs-3" href="#home">Lahiru Liyanage<span>.</span></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <div class="nav-menu">
-                <ul class="nav_menu_list d-flex justify-content-center align-items-center gap-4">
-                    <li class="nav_list">
-                        <a href="#home" class="nav-link active-link">Home</a>
-                        <div class="circle"></div>
-                    </li>
-                    <li class="nav_list">
-                        <a href="#about" class="nav-link">About</a>
-                        <div class="circle"></div>
-                    </li>
-                    <li class="nav_list">
-                        <a href="#projects" class="nav-link">Projects</a>
-                        <div class="circle"></div>
-                    </li>
-                    <li class="nav_list">
-                        <a href="#contact" class="nav-link">Contact</a>
-                        <div class="circle"></div>
-                    </li>
-                    <li class="nav_list ms-3">
-                        <div class="theme-switch" id="theme-switch">
-                            <i class="fas fa-sun theme-switch-icon" id="theme-icon"></i>
-                        </div>
-                    </li>
-                </ul>
-            </div>
+            <ul class="navbar-nav align-items-center">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+                <li class="nav-item ms-2">
+                    <div class="theme-switch" id="theme-switch">
+                        <i class="fas fa-sun theme-switch-icon" id="theme-icon"></i>
+                    </div>
+                </li>
+            </ul>
         </div>
     </div>
 </nav>
 
 <!-- Hero Section -->
-<section id="home" class="hero-section">
+<section id="home" class="hero-section d-flex align-items-center">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-lg-6 order-lg-2">
-                <img src="./assets/user-image.png" alt="Lahiru Liyanage" class="hero-image mx-auto d-block">
+            <div class="col-lg-6 order-lg-2 mb-4 mb-lg-0">
+                <img src="./assets/user-image.png" alt="Lahiru Liyanage" class="img-fluid hero-image mx-auto d-block">
             </div>
             <div class="col-lg-6 order-lg-1 hero-content">
-                <h1 class="hero-title">Hello, I'm Lahiru Liyanage</h1>
-                <h2 class="hero-subtitle">Full-Stack Software Developer</h2>
-                <p class="hero-desc">Crafting digital symphonies where code and design harmonize to create seamless user experiences.</p>
-                <div class="hero-btns">
-                    <a href="#projects" class="btn btn-custom btn-primary-custom">View My Work</a>
-                    <a href="#contact" class="btn btn-custom btn-outline-custom">Contact Me</a>
+                <h1 class="hero-title display-4 mb-3">Hello, I'm <br> <span class="fw-bold">Lahiru Liyanage</span></h1>
+                <h2 class="hero-subtitle fw-bold fs-3 mb-4">Full-Stack Software Developer</h2>
+                <p class="lead mb-4">Crafting digital symphonies where code and design harmonize to create seamless user experiences.</p>
+                <div class="d-flex flex-wrap gap-3 mb-4">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-outline-primary">Contact Me</a>
                 </div>
-                <div class="social-icons mt-4">
-                    <a href="#"><i class="fab fa-github"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-dribbble"></i></a>
+                <div class="mt-4">
+                    <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-dribbble"></i></a>
                 </div>
             </div>
         </div>
@@ -82,43 +78,66 @@
 <!-- About Section -->
 <section id="about" class="py-5">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-6">
+        <div class="row gx-5">
+            <div class="col-lg-6 mb-5 mb-lg-0">
                 <h2 class="section-title">About Me</h2>
-                <p class="about-desc">I'm a passionate software developer with expertise in creating modern web applications. With a strong foundation in both frontend and backend technologies, I enjoy building complete solutions that solve real-world problems.</p>
-                <p class="about-desc">My journey in software development began 5 years ago, and since then, I've worked on various projects ranging from e-commerce platforms to data visualization tools. I'm constantly learning new technologies and methodologies to enhance my skills.</p>
-                <div class="row mt-4">
+                <p class="lead mb-4">I'm a passionate software developer with expertise in creating modern web applications. With a strong foundation in both frontend and backend technologies, I enjoy building complete solutions that solve real-world problems.</p>
+                <p class="mb-4">My journey in software development began 5 years ago, and since then, I've worked on various projects ranging from e-commerce platforms to data visualization tools. I'm constantly learning new technologies and methodologies to enhance my skills.</p>
+                <div class="row g-4 mt-2">
                     <div class="col-md-6">
-                        <h4>Education</h4>
-                        <p>Bachelors from University of Moratuwa, Sri Lanka<br>MSc on Project Management from Solent University, Southampton, UK</p>
+                        <div class="card border-0 bg-transparent">
+                            <div class="card-body p-0">
+                                <h4 class="card-title fs-5 mb-3">Education</h4>
+                                <p class="card-text">Bachelors from University of Moratuwa, Sri Lanka<br><hr>MSc on Project Management from Solent University, Southampton, UK</p>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-md-6">
-                        <h4>Experience</h4>
-                        <p>Project Architect @ OREL Corporation 2021 - 2024<br>Associate Software Developer @ IJSE 2024 - Present</p>
+                        <div class="card border-0 bg-transparent">
+                            <div class="card-body p-0">
+                                <h4 class="card-title fs-5 mb-3">Experience</h4>
+                                <p class="card-text">Project Architect @ OREL Corporation 2021 - 2024<br><hr>Associate Software Developer @ IJSE 2024 - Present</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="col-lg-6">
-                <div class="row">
+                <div class="row g-4">
                     <div class="col-md-6">
-                        <div class="skill-box">
-                            <i class="fas fa-code skill-icon"></i>
-                            <h3>Web Development</h3>
-                            <p>Creating responsive and dynamic web applications using modern frameworks.</p>
+                        <div class="card skill-card h-100">
+                            <div class="card-body">
+                                <i class="fas fa-code skill-icon"></i>
+                                <h3 class="card-title fs-5 mb-3">Web Development</h3>
+                                <p class="card-text mb-0">Creating responsive and dynamic web applications using modern frameworks.</p>
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <div class="skill-box">
-                            <i class="fas fa-database skill-icon"></i>
-                            <h3>Backend Development</h3>
-                            <p>Building robust backend systems with Node.js, Express, and MongoDB.</p>
+                        <div class="card skill-card h-100">
+                            <div class="card-body">
+                                <i class="fa-solid fa-laptop-code skill-icon"></i>
+                                <h3 class="card-title fs-5 mb-3">Desktop Apps</h3>
+                                <p class="card-text mb-0">Developing cross-platform mobile applications with React Native.</p>
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <div class="skill-box">
-                            <i class="fas fa-paint-brush skill-icon"></i>
-                            <h3>UI/UX Design</h3>
-                            <p>Creating intuitive and visually appealing user interfaces.</p>
+                        <div class="card skill-card h-100">
+                            <div class="card-body">
+                                <i class="fas fa-database skill-icon"></i>
+                                <h3 class="card-title fs-5 mb-3">Backend Development</h3>
+                                <p class="card-text mb-0">Building robust backend systems with Node.js, Express, and MongoDB.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card skill-card h-100">
+                            <div class="card-body">
+                                <i class="fas fa-paint-brush skill-icon"></i>
+                                <h3 class="card-title fs-5 mb-3">UI/UX Design</h3>
+                                <p class="card-text mb-0">Creating intuitive and visually appealing user interfaces.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -128,17 +147,17 @@
 </section>
 
 <!-- Projects Section -->
-<section id="projects" class="py-5 bg-light-custom">
+<section id="projects" class="py-5 bg-section">
     <div class="container">
         <h2 class="section-title text-center">My Projects</h2>
-        <div class="row">
+        <div class="row g-4">
             <div class="col-md-4">
-                <div class="project-card">
-                    <img src="/api/placeholder/400/300" class="card-img-top project-img" alt="Project 1">
-                    <div class="card-body">
-                        <h5 class="card-title">E-commerce Platform</h5>
-                        <p class="card-text">A complete e-commerce solution with product management, cart, and payment processing.</p>
-                        <div class="d-flex justify-content-between">
+                <div class="card h-100">
+                    <img src="/api/placeholder/400/300" class="card-img-top" alt="E-commerce Platform">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title mb-3">E-commerce Platform</h5>
+                        <p class="card-text flex-grow-1">A complete e-commerce solution with product management, cart, and payment processing.</p>
+                        <div class="d-flex justify-content-between mt-3">
                             <a href="#" class="btn btn-sm btn-primary">Live Demo</a>
                             <a href="#" class="btn btn-sm btn-outline-secondary">Code</a>
                         </div>
@@ -146,12 +165,12 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="project-card">
-                    <img src="/api/placeholder/400/300" class="card-img-top project-img" alt="Project 2">
-                    <div class="card-body">
-                        <h5 class="card-title">Task Management App</h5>
-                        <p class="card-text">A productivity application for managing tasks with drag-and-drop functionality.</p>
-                        <div class="d-flex justify-content-between">
+                <div class="card h-100">
+                    <img src="/api/placeholder/400/300" class="card-img-top" alt="Task Management App">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title mb-3">Task Management App</h5>
+                        <p class="card-text flex-grow-1">A productivity application for managing tasks with drag-and-drop functionality.</p>
+                        <div class="d-flex justify-content-between mt-3">
                             <a href="#" class="btn btn-sm btn-primary">Live Demo</a>
                             <a href="#" class="btn btn-sm btn-outline-secondary">Code</a>
                         </div>
@@ -159,12 +178,12 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="project-card">
-                    <img src="/api/placeholder/400/300" class="card-img-top project-img" alt="Project 3">
-                    <div class="card-body">
-                        <h5 class="card-title">Data Visualization Tool</h5>
-                        <p class="card-text">Interactive dashboards for visualizing and analyzing complex datasets.</p>
-                        <div class="d-flex justify-content-between">
+                <div class="card h-100">
+                    <img src="/api/placeholder/400/300" class="card-img-top" alt="Data Visualization Tool">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title mb-3">Data Visualization Tool</h5>
+                        <p class="card-text flex-grow-1">Interactive dashboards for visualizing and analyzing complex datasets.</p>
+                        <div class="d-flex justify-content-between mt-3">
                             <a href="#" class="btn btn-sm btn-primary">Live Demo</a>
                             <a href="#" class="btn btn-sm btn-outline-secondary">Code</a>
                         </div>
@@ -179,50 +198,67 @@
 <section id="contact" class="py-5">
     <div class="container">
         <h2 class="section-title text-center">Get In Touch</h2>
-        <div class="row">
+        <div class="row g-4">
             <div class="col-lg-4">
-                <div class="contact-info">
-                    <div class="d-flex align-items-center mb-4">
-                        <i class="fas fa-envelope contact-icon"></i>
-                        <div>
-                            <h4 class="mb-0">Email</h4>
-                            <p class="mb-0">lhlahiru95@gmail.com</p>
+                <div class="card h-100">
+                    <div class="card-body">
+                        <div class="contact-info-item d-flex align-items-center">
+                            <div class="contact-icon me-3">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="fs-5 mb-1">Email</h4>
+                                <p class="mb-0">lhlahiru95@gmail.com</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="d-flex align-items-center mb-4">
-                        <i class="fas fa-phone contact-icon"></i>
-                        <div>
-                            <h4 class="mb-0">Phone</h4>
-                            <p class="mb-0">+94 71 960 7296</p>
+                        <div class="contact-info-item d-flex align-items-center">
+                            <div class="contact-icon me-3">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="fs-5 mb-1">Phone</h4>
+                                <a href="tel:+94719607296">+94 71 960 7296</a>
+                                <p class="mb-0">+94 71 960 7296</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="d-flex align-items-center">
-                        <i class="fas fa-map-marker-alt contact-icon"></i>
-                        <div>
-                            <h4 class="mb-0">Location</h4>
-                            <p class="mb-0">Colombo, Sri Lanka</p>
+                        <div class="contact-info-item d-flex align-items-center mb-0">
+                            <div class="contact-icon me-3">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="fs-5 mb-1">Location</h4>
+                                <p class="mb-0">Colombo, Sri Lanka</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-lg-8">
-                <form class="contact-form">
-                    <div class="row">
-                        <div class="col-md-6 mb-3">
-                            <input type="text" class="form-control" placeholder="Your Name">
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <input type="email" class="form-control" placeholder="Your Email">
-                        </div>
+                <div class="card h-100">
+                    <div class="card-body">
+                        <form class="row g-3">
+                            <div class="col-md-6">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="Your Name">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="Your Email">
+                            </div>
+                            <div class="col-12">
+                                <label for="subject" class="form-label">Subject</label>
+                                <input type="text" class="form-control" id="subject" placeholder="Subject">
+                            </div>
+                            <div class="col-12">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control" id="message" rows="5" placeholder="Your Message"></textarea>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary">Send Message</button>
+                            </div>
+                        </form>
                     </div>
-                    <div class="mb-3">
-                        <input type="text" class="form-control" placeholder="Subject">
-                    </div>
-                    <div class="mb-3">
-                        <textarea class="form-control" rows="5" placeholder="Your Message"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-custom btn-primary-custom">Send Message</button>
-                </form>
+                </div>
             </div>
         </div>
     </div>
@@ -231,24 +267,20 @@
 <!-- Footer -->
 <footer class="text-center">
     <div class="container">
-        <div class="footer-links mb-3">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
+        <div class="mb-4">
+            <a href="#home" class="footer-link">Home</a>
+            <a href="#about" class="footer-link">About</a>
+            <a href="#projects" class="footer-link">Projects</a>
+            <a href="#contact" class="footer-link">Contact</a>
         </div>
-        <div class="social-icons mb-3">
-            <a href="#"><i class="fab fa-github"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-dribbble"></i></a>
+        <div class="mb-4">
+            <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-dribbble"></i></a>
         </div>
-        <p>&copy; 2025 Lahiru Liyanage. All Rights Reserved.</p>
+        <p class="mb-0">&copy; 2025 Lahiru Liyanage. All Rights Reserved.</p>
     </div>
 </footer>
-<div class="theme-toggle-floating" id="theme-toggle-floating">
-    <i class="bi bi-sun-fill" id="floating-theme-icon"></i>
-</div>
-
 </body>
 </html>

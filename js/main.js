@@ -1,27 +1,30 @@
-// Active link highlighting
+// Active navigation based on scroll position
 document.addEventListener('DOMContentLoaded', function() {
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('.nav-link');
 
-    window.addEventListener('scroll', function() {
+    function onScroll() {
         let current = '';
+        const scrollPosition = window.scrollY + 100;
 
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.clientHeight;
 
-            if (pageYOffset >= (sectionTop - sectionHeight/3)) {
+            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
                 current = section.getAttribute('id');
             }
         });
 
         navLinks.forEach(link => {
-            link.classList.remove('active-link');
-            if (link.getAttribute('href').substring(1) === current) {
-                link.classList.add('active-link');
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${current}`) {
+                link.classList.add('active');
             }
         });
-    });
+    }
+
+    window.addEventListener('scroll', onScroll);
 
     // Smooth scrolling
     navLinks.forEach(link => {
@@ -29,27 +32,27 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault();
 
             const targetId = this.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
+            const targetPosition = document.querySelector(targetId).offsetTop;
 
             window.scrollTo({
-                top: targetSection.offsetTop,
+                top: targetPosition,
                 behavior: 'smooth'
             });
 
-            // Close mobile menu if open
+            // Close mobile menu when a link is clicked
             const navbarCollapse = document.querySelector('.navbar-collapse');
             if (navbarCollapse.classList.contains('show')) {
-                navbarCollapse.classList.remove('show');
+                bootstrap.Collapse.getInstance(navbarCollapse).hide();
             }
         });
     });
 
-    // Theme Switch
+    // Theme switcher
     const themeSwitch = document.getElementById('theme-switch');
     const themeIcon = document.getElementById('theme-icon');
     const htmlTag = document.documentElement;
 
-    // Check for saved theme preference or use device preference
+    // Check for saved theme preference or system preference
     const savedTheme = localStorage.getItem('theme') ||
         (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
 
@@ -76,34 +79,4 @@ document.addEventListener('DOMContentLoaded', function() {
             themeIcon.classList.add('fa-sun');
         }
     }
-    // Floating Theme Toggle
-    const floatingThemeToggle = document.getElementById('theme-toggle-floating');
-    const floatingThemeIcon = document.getElementById('floating-theme-icon');
-
-// Link the floating button to the same functionality
-    floatingThemeToggle.addEventListener('click', () => {
-        const currentTheme = document.documentElement.getAttribute('data-theme');
-        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-
-        document.documentElement.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
-
-        // Update both theme icons
-        updateThemeIcon(newTheme);
-        updateFloatingThemeIcon(newTheme);
-    });
-
-// Update the floating button icon
-    function updateFloatingThemeIcon(theme) {
-        if (theme === 'dark') {
-            floatingThemeIcon.classList.remove('bi-sun-fill');
-            floatingThemeIcon.classList.add('bi-moon-fill');
-        } else {
-            floatingThemeIcon.classList.remove('bi-moon-fill');
-            floatingThemeIcon.classList.add('bi-sun-fill');
-        }
-    }
-
-// Initialize the floating button icon
-    updateFloatingThemeIcon(document.documentElement.getAttribute('data-theme'));
 });
