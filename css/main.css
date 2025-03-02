@@ -48,7 +48,7 @@ body {
 
 .navbar-brand span {
     color: var(--accent-color);
-    font-weight: 800;
+    /*font-weight: 800;*/
 }
 
 .nav-link {
@@ -59,7 +59,7 @@ body {
 }
 
 .nav-link:hover, .nav-link.active {
-    color: var(--primary-color);
+    color: var(--primary-color); !important;
 }
 
 .nav-link::after {
@@ -91,7 +91,7 @@ body {
 }
 
 .hero-title {
-    font-weight: 700;
+    /*font-weight: 700;*/
     color: var(--text-color);
 }
 
@@ -274,6 +274,10 @@ footer {
     .hero-content {
         text-align: center;
         margin-top: 2rem;
+    }
+
+    .btn-contact {
+        justify-self: center;
     }
 
     .section-title {
