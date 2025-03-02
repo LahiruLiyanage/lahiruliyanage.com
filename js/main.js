@@ -76,4 +76,34 @@ document.addEventListener('DOMContentLoaded', function() {
             themeIcon.classList.add('fa-sun');
         }
     }
+    // Floating Theme Toggle
+    const floatingThemeToggle = document.getElementById('theme-toggle-floating');
+    const floatingThemeIcon = document.getElementById('floating-theme-icon');
+
+// Link the floating button to the same functionality
+    floatingThemeToggle.addEventListener('click', () => {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+
+        // Update both theme icons
+        updateThemeIcon(newTheme);
+        updateFloatingThemeIcon(newTheme);
+    });
+
+// Update the floating button icon
+    function updateFloatingThemeIcon(theme) {
+        if (theme === 'dark') {
+            floatingThemeIcon.classList.remove('bi-sun-fill');
+            floatingThemeIcon.classList.add('bi-moon-fill');
+        } else {
+            floatingThemeIcon.classList.remove('bi-moon-fill');
+            floatingThemeIcon.classList.add('bi-sun-fill');
+        }
+    }
+
+// Initialize the floating button icon
+    updateFloatingThemeIcon(document.documentElement.getAttribute('data-theme'));
 });
