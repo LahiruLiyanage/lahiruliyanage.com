@@ -13,14 +13,14 @@
             crossorigin="anonymous"></script>
 </head>
 <body>
+<body>
 <!-- Header -->
 <nav id="header" class="navbar navbar-expand-lg navbar-light">
     <div class="container">
         <div class="nav-logo">
             <p class="nav-name fs-2 pt-2">Lahiru Liyanage<span>.</span></p>
         </div>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
@@ -42,6 +42,11 @@
                         <a href="#contact" class="nav-link">Contact</a>
                         <div class="circle"></div>
                     </li>
+                    <li class="nav_list ms-3">
+                        <div class="theme-switch" id="theme-switch">
+                            <i class="fas fa-sun theme-switch-icon" id="theme-icon"></i>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -53,13 +58,12 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6 order-lg-2">
-                <img src="/api/placeholder/500/500" alt="Lahiru Liyanage" class="hero-image mx-auto d-block">
+                <img src="./assets/user-image.png" alt="Lahiru Liyanage" class="hero-image mx-auto d-block">
             </div>
             <div class="col-lg-6 order-lg-1 hero-content">
                 <h1 class="hero-title">Hello, I'm Lahiru Liyanage</h1>
                 <h2 class="hero-subtitle">Software Developer</h2>
-                <p class="hero-desc">I create elegant, efficient, and user-friendly web applications with a focus on
-                    delivering exceptional digital experiences.</p>
+                <p class="hero-desc">I create elegant, efficient, and user-friendly web applications with a focus on delivering exceptional digital experiences.</p>
                 <div class="hero-btns">
                     <a href="#projects" class="btn btn-custom btn-primary-custom">View My Work</a>
                     <a href="#contact" class="btn btn-custom btn-outline-custom">Contact Me</a>
@@ -81,12 +85,8 @@
         <div class="row">
             <div class="col-lg-6">
                 <h2 class="section-title">About Me</h2>
-                <p class="about-desc">I'm a passionate software developer with expertise in creating modern web
-                    applications. With a strong foundation in both frontend and backend technologies, I enjoy building
-                    complete solutions that solve real-world problems.</p>
-                <p class="about-desc">My journey in software development began 5 years ago, and since then, I've worked
-                    on various projects ranging from e-commerce platforms to data visualization tools. I'm constantly
-                    learning new technologies and methodologies to enhance my skills.</p>
+                <p class="about-desc">I'm a passionate software developer with expertise in creating modern web applications. With a strong foundation in both frontend and backend technologies, I enjoy building complete solutions that solve real-world problems.</p>
+                <p class="about-desc">My journey in software development began 5 years ago, and since then, I've worked on various projects ranging from e-commerce platforms to data visualization tools. I'm constantly learning new technologies and methodologies to enhance my skills.</p>
                 <div class="row mt-4">
                     <div class="col-md-6">
                         <h4>Education</h4>
@@ -135,7 +135,7 @@
 </section>
 
 <!-- Projects Section -->
-<section id="projects" class="py-5 bg-light">
+<section id="projects" class="py-5 bg-light-custom">
     <div class="container">
         <h2 class="section-title text-center">My Projects</h2>
         <div class="row">
@@ -144,8 +144,7 @@
                     <img src="/api/placeholder/400/300" class="card-img-top project-img" alt="Project 1">
                     <div class="card-body">
                         <h5 class="card-title">E-commerce Platform</h5>
-                        <p class="card-text">A complete e-commerce solution with product management, cart, and payment
-                            processing.</p>
+                        <p class="card-text">A complete e-commerce solution with product management, cart, and payment processing.</p>
                         <div class="d-flex justify-content-between">
                             <a href="#" class="btn btn-sm btn-primary">Live Demo</a>
                             <a href="#" class="btn btn-sm btn-outline-secondary">Code</a>
@@ -158,8 +157,7 @@
                     <img src="/api/placeholder/400/300" class="card-img-top project-img" alt="Project 2">
                     <div class="card-body">
                         <h5 class="card-title">Task Management App</h5>
-                        <p class="card-text">A productivity application for managing tasks with drag-and-drop
-                            functionality.</p>
+                        <p class="card-text">A productivity application for managing tasks with drag-and-drop functionality.</p>
                         <div class="d-flex justify-content-between">
                             <a href="#" class="btn btn-sm btn-primary">Live Demo</a>
                             <a href="#" class="btn btn-sm btn-outline-secondary">Code</a>
@@ -183,6 +181,7 @@
         </div>
     </div>
 </section>
+
 <!-- Contact Section -->
 <section id="contact" class="py-5">
     <div class="container">
